@@ -1,0 +1,197 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+  font-family:'Segoe UI',sans-serif;
+  background:#ececec;        /* Subtle gray background */
+  color:#222;
+  line-height:1.6;
+  padding-top: 80px;         /* Space for fixed nav so content isn’t hidden */
+}
+
+a { color:inherit; text-decoration:none; }
+
+/* WhatsApp Icon */
+.whatsapp-btn {
+  position:fixed; bottom:20px; right:20px;
+}
+.whatsapp-btn img {
+  width:56px; height:56px;
+}
+
+/* Progress Bar */
+.progress-bar {
+  position:fixed; top:0; left:0;
+  height:4px; background:#A3D9A5;
+  width:0; transition:width .2s;
+}
+
+/* Fixed Navigation */
+.nav {
+  position:fixed;
+  top:0; left:0;
+  width:100%; max-width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 30px;
+  background:#fff;
+  box-shadow:0 2px 4px rgba(0,0,0,0.1);
+  z-index:1000;
+}
+.logo { font-size:2.2rem; font-weight:900; color:#2BAEAE; }
+.nav-links { display:flex; gap:25px; }
+.nav-links a {
+  font-weight:700; padding:8px;
+  transition:color .3s,border-bottom .3s;
+}
+.nav-links a:hover {
+  color:#2BAEAE;
+  border-bottom:2px solid #F7D04F;
+}
+.nav-cta .btn.small { font-weight:700; }
+
+.nav-toggle { display:none; }
+.hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+.hamburger span { width:25px; height:3px; background:#222; }
+
+@media(max-width:768px){
+  .nav-links, .nav-cta {
+    display:none;
+    position:absolute; top:60px; right:30px;
+    background:#fff;
+    flex-direction:column;
+    gap:10px;
+    padding:15px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.15);
+  }
+  .nav-toggle:checked ~ .nav-links,
+  .nav-toggle:checked ~ .nav-cta {
+    display:flex;
+  }
+  .hamburger { display:flex; }
+}
+
+/* Hero Section */
+.hero-content.centered {
+  max-width:600px;
+  margin:0 auto;
+  text-align:center;
+  padding:60px 20px;
+}
+.hero-title {
+  font-size:3rem;
+  color:#2BAEAE;
+  margin-bottom:10px;
+  font-weight:800;
+}
+.hero-subtitle {
+  font-size:1.2rem;
+  color:#555;
+  margin-bottom:20px;
+}
+
+/* Buttons */
+.btn {
+  display:inline-block;
+  border-radius:4px;
+  transition:background .3s,color .3s;
+  background:#2BAEAE;
+  color:#fff;
+  font-weight:700;
+}
+.btn.small {
+  font-size:0.9rem;
+  padding:8px 16px;
+}
+.btn.medium {
+  font-size:1.1rem;
+  padding:12px 28px;
+}
+.btn:hover {
+  background:#F7D04F;
+  color:#222;
+}
+
+/* Sections & Titles */
+.section {
+  padding:60px 20px;
+  text-align:center;
+}
+.section-title {
+  font-size:2rem;
+  color:#2BAEAE;
+  margin-bottom:20px;
+  font-weight:800;
+}
+
+/* Services Cards */
+.service-cards {
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
+}
+.card {
+  background:#A3D9A5;
+  color:#fff;
+  padding:20px;
+  border-radius:8px;
+  flex:1 1 200px;
+  max-width:250px;
+  transition:transform .3s;
+  font-weight:700;
+}
+.card:hover {
+  transform:translateY(-5px);
+}
+
+/* Carousel Setup */
+.carousel {
+  overflow:hidden;
+  max-width:600px;
+  margin:0 auto;
+}
+.slides {
+  display:flex;
+  transition:transform .5s ease;
+}
+.slides img {
+  width:50%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  border-radius:8px;
+}
+.slides img:hover {
+  transform:scale(1.05);
+}
+
+/* Booking WhatsApp Alt */
+.whatsapp-alternate {
+  margin-top:20px;
+}
+.whatsapp-text {
+  background:#25D366;
+}
+.whatsapp-text:hover {
+  background:#1DA851;
+}
+
+/* Testimonials */
+.testimonials blockquote {
+  font-style:italic;
+  margin:20px auto;
+  max-width:600px;
+  border-left:4px solid #2BAEAE;
+  padding-left:16px;
+  font-weight:700;
+}
+
+/* Scroll Reveal */
+.reveal {
+  opacity:0;
+  transform:translateY(20px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}

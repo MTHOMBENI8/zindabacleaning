@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zindaba Cleaning Services</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a href="https://wa.me/27680733357" class="whatsapp-btn" target="_blank" aria-label="Chat on WhatsApp">
+    <img src="img/whatsapp-icon.png" alt="WhatsApp">
+  </a>
+  <div class="progress-bar"></div>
+
+  <header class="hero">
+    <nav class="nav">
+      <div class="logo">Zindaba Cleaning Services</div>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <ul class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Book Now</a>
+        <a href="#contact">Contact</a>
+      </ul>
+      <div class="nav-cta"><a href="#booking" class="btn small">Get a Quote</a></div>
+      <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    </nav>
+
+
+
+    <div class="hero-content reveal centered">
+      <h2 class="hero-title">✨ Sparkling Clean, Every Time</h2>
+      <p class="hero-subtitle">Reliable & eco‑friendly cleaning in Tembisa—homes, offices, carpets & windows.</p>
+      <a href="#booking" class="btn medium">Book a Clean</a>
+    </div>
+  </header>
+
+  <section id="services" class="services section">
+    <h2 class="section-title reveal">OUR SERVICES</h2>
+    <div class="service-cards">
+      <div class="card reveal"><h3>Carpet Cleaning</h3><p>Deep-refresh for healthier living.</p></div>
+      <div class="card reveal"><h3>Window Cleaning</h3><p>Crystal-clear glass, inside & out.</p></div>
+      <div class="card reveal"><h3>Deep Cleaning</h3><p>Complete sanitation for home & office.</p></div>
+      <div class="card reveal"><h3>Office Cleaning</h3><p>Professional care for productive spaces.</p></div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery section">
+    <h2 class="section-title reveal">OUR WORK</h2>
+    <div class="carousel reveal">
+      <div class="slides">
+        <img src="images/1.jpg" alt="After cleaning">
+        <img src="images/2.jpg" alt="After cleaning">
+        <img src="images/3.jpg" alt="After cleaning">
+        <img src="images/4.jpg" alt="After cleaning">
+        <img src="images/logo.jpg" alt="After cleaning">
+      </div>
+    </div>
+  </section>
+
+  <section id="booking" class="booking section">
+    <h2 class="section-title reveal">Book a Clean</h2>
+    <p class="subtitle reveal">Fill the form or message us on WhatsApp!</p>
+    <form name="booking" method="POST" data-netlify="true" class="reveal">
+      <input type="hidden" name="form-name" value="booking">
+      <input type="text" name="name" placeholder="Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="phone" placeholder="Phone" required />
+      <select name="service" required>
+        <option value="" disabled selected>Select Service</option>
+        <option>Carpet Cleaning</option>
+        <option>Window Cleaning</option>
+        <option>Deep Cleaning</option>
+        <option>Office Cleaning</option>
+      </select>
+      <input type="datetime-local" name="datetime" required />
+      <button type="submit" class="btn medium">Submit Booking</button>
+    </form>
+    <div class="whatsapp-alternate reveal">
+      <p>Or message us directly:</p>
+      <a href="https://wa.me/27680733357?text=Hello%20Zindaba,%20I’d%20like%20to%20book%20a%20cleaning%20service." class="btn medium whatsapp-text" target="_blank">
+        WhatsApp Booking
+      </a>
+    </div>
+  </section>
+
+  <section class="testimonials section">
+    <h2 class="section-title reveal">What Clients Say</h2>
+    <blockquote class="reveal">“SparkleClean made my apartment look brand new!”</blockquote>
+    <blockquote class="reveal">“Reliable, punctual, and thorough, Ngiyabonga Kakhulu.” – Sarah J.</blockquote>
+    <blockquote class="reveal">“Always on time and our windows always gleaming, I am happy always.” – Nonjabulo M.</blockquote>
+  </section>
+
+  <footer id="contact" class="section">
+    <div class="reveal">
+      <p>📍 Tembisa, Gauteng | 📞 068 073 3357 | ✉️ <a href="mailto:zindabacleaning@gmail.com">zindabacleaning@gmail.com</a></p>
+      <p>&copy; 2025 Zindaba Cleaning Services – “Where Clean Meets Care.”</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
